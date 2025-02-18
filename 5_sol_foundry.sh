@@ -10,7 +10,7 @@ DEPLOYED_ADDRESS=$(forge create --rpc-url $JSON_RPC \
  --evm-version $EVM_VERSION \
  --optimize $OPTIMIZE \
  --optimizer-runs $OPTIMIZE_RUNS \
- --broadcast src/MyToken.sol:MyToken \
+ --broadcast src/solidity/MyToken.sol:MyToken \
  --constructor-args $NAME $SYMBOL | grep "Deployed to:" | cut -d ' ' -f 3)
 
 # PLEASE LOOK AT CONTRACT VERIFICATION IN SCAN FIRST
@@ -21,4 +21,4 @@ forge verify-contract \
   --constructor-args $(cast abi-encode "constructor(string,string)" $NAME $SYMBOL) \
   --verifier-url $VERIFIER_URL \
   $DEPLOYED_ADDRESS \
-  src/MyToken.sol:MyToken
+  src/solidity/MyToken.sol:MyToken
