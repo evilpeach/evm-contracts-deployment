@@ -42,6 +42,7 @@ EVM_VERSION=paris
 OPTIMIZE=true
 OPTIMIZE_RUNS=10000
 
+# Deploy the libraries
 MATH_LIBRARY_ADDRESS=$(forge create --rpc-url $JSON_RPC \
  --private-key $PRIVATE_KEY \
  --use $SOLC_VERSION \
@@ -66,6 +67,7 @@ DIVIDE_LIBRARY_ADDRESS=$(forge create --rpc-url $JSON_RPC \
  --optimizer-runs $OPTIMIZE_RUNS \
  --broadcast src/solidity/libraries/DivideLibrary.sol:DivideLibrary | grep "Deployed to:" | cut -d ' ' -f 3)
 
+# Deploy the main contract
 forge create --rpc-url $JSON_RPC \
  --private-key $PRIVATE_KEY \
  --use $SOLC_VERSION \
