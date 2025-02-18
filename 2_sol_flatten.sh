@@ -13,7 +13,7 @@ forge create --rpc-url $JSON_RPC \
  --evm-version $EVM_VERSION \
  --optimize $OPTIMIZE \
  --optimizer-runs $OPTIMIZE_RUNS \
- --broadcast src/Storage.sol:Storage
+ --broadcast src/solidity/Storage.sol:Storage
 
 # Get contract code for verification
 forge flatten src/Storage.sol | pbcopy
@@ -30,7 +30,7 @@ forge create --rpc-url $JSON_RPC \
  --evm-version $EVM_VERSION \
  --optimize $OPTIMIZE \
  --optimizer-runs $OPTIMIZE_RUNS \
- --broadcast src/StorageArgs.sol:StorageArgs \
+ --broadcast src/solidity/StorageArgs.sol:StorageArgs \
  --constructor-args $ARGUMENT
 
 cast abi-encode "constructor(uint256)" $ARGUMENT
