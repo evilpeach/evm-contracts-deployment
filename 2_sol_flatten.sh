@@ -16,7 +16,7 @@ forge create --rpc-url $JSON_RPC \
  --broadcast src/solidity/Storage.sol:Storage
 
 # Get contract code for verification
-forge flatten src/Storage.sol | pbcopy
+forge flatten src/solidity/Storage.sol | pbcopy
 
 # Case 2: Deployment with constructor arguments and optimization runs
 SOLC_VERSION=0.8.26
@@ -33,4 +33,5 @@ forge create --rpc-url $JSON_RPC \
  --broadcast src/solidity/StorageArgs.sol:StorageArgs \
  --constructor-args $ARGUMENT
 
+# Get the constructor arguments
 cast abi-encode "constructor(uint256)" $ARGUMENT
