@@ -9,12 +9,9 @@ contract MainContract {
 
     StorageContract private storageContract;
 
-    // constructor(address _storageContractAddress) {
-    //     storageContract = StorageContract(_storageContractAddress);
-    // }
-
-    constructor() {
+    constructor(uint256 initialValue) {
         storageContract = new StorageContract();
+        storageContract.setStoredValue(initialValue);
     }
 
     function storeAndSquareValue(uint256 value) external {
