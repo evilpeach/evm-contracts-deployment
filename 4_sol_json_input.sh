@@ -1,3 +1,4 @@
+# DO NOT CHANGE ANYTHING
 SOLC_VERSION=0.8.27
 EVM_VERSION=cancun
 OPTIMIZE=true
@@ -12,3 +13,8 @@ forge create --rpc-url $JSON_RPC \
  --optimizer-runs $OPTIMIZE_RUNS \
  --broadcast src/solidity/MyToken.sol:MyToken \
  --constructor-args $NAME $SYMBOL
+
+# Please use src/solidity/json-input/MyToken.json to upload file
+
+# Get constructor arguments and copy to clipboard
+cast abi-encode "constructor(string, string)" $NAME $SYMBOL | pbcopy
