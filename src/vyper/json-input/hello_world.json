@@ -1,0 +1,15 @@
+{
+  "language": "Vyper",
+  "sources": {
+    "hello_world.vy": {
+      "content": "# pragma version ^0.4.0\n\n# Create a string variable that can store maximum 100 characters\ngreet: public(String[100])\n\n@deploy\ndef __init__():\n    self.greet = \"Hello World\"\n"
+    }
+  },
+  "settings": {
+    "outputSelection": {
+      "*": ["evm.bytecode", "abi"]
+    },
+    "optimize": "codesize",
+    "evmVersion": "shanghai"
+  }
+}

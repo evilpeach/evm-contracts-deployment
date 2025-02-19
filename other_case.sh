@@ -1,0 +1,2 @@
+# Large JSON File (It will generate 11MB JSON file named)
+python -c 'import json, random; data = {"values": [random.randint(1, 100000) for _ in range(1100000)]}; open("large.json", "w").write(json.dumps(data, indent=2))'

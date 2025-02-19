@@ -1,0 +1,15 @@
+{
+  "language": "Vyper",
+  "sources": {
+    "with_constructor.vy": {
+      "content": "# pragma version ^0.4.0\n\nowner: public(address)\nname: public(String[10])\ncreatedAt: public(uint256)\nexpiresAt: public(uint256)\n\n@deploy\ndef __init__(name: String[10], duration: uint256):\n    # set owner to caller\n    self.owner = msg.sender\n    # set name from input\n    self.name = name\n    self.createdAt = block.timestamp\n    self.expiresAt = block.timestamp + duration\n"
+    }
+  },
+  "settings": {
+    "outputSelection": {
+      "*": ["evm.bytecode", "abi"]
+    },
+    "optimize": "gas",
+    "evmVersion": "cancun"
+  }
+}
