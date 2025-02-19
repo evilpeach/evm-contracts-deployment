@@ -1,3 +1,11 @@
+# Clone this repository
+git clone https://github.com/PaulRBerg/foundry-template.git
+cd foundry-template
+
+# Install dependencies
+pnpm install
+
+# Deploy contract
 SOLC_VERSION=0.8.28
 EVM_VERSION=cancun
 OPTIMIZE=true

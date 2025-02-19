@@ -2,7 +2,7 @@
 
 # Install Foundry
 curl -L https://foundry.paradigm.xyz | bash
-
+foundryup
 forge --version
 # forge 0.3.0 (5a8bd89 2024-12-20T08:45:53.204298000Z)
 

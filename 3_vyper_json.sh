@@ -16,4 +16,4 @@ COMPILED_BYTECODE+=$(cast abi-encode "constructor(string,uint256)" $NAME $DURATI
 cast send --private-key $PRIVATE_KEY --rpc-url $JSON_RPC --create $COMPILED_BYTECODE
 
 # Get constructor arguments
-cast abi-encode "constructor(string,uint256)" $NAME $DURATION
+cast abi-encode "constructor(string,uint256)" $NAME $DURATION | pbcopy
