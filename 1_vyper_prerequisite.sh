@@ -8,7 +8,7 @@ source venv/bin/activate
 
 # Install Vyper
 pip install vyper
-vyper --version # 0.4.0+commit.e9db8d9
+vyper --version # 0.4.0+commit.e9db8d9 (We use this version)
 
 # Install Foundry for cast cmd
 curl -L https://foundry.paradigm.xyz | bash
