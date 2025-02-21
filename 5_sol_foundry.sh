@@ -5,6 +5,8 @@ cd foundry-template
 # Install dependencies
 pnpm install
 
+# Copy MyToken to src directory in your project
+
 # Deploy contract
 SOLC_VERSION=0.8.28
 EVM_VERSION=cancun
